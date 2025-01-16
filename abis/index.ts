@@ -12,3 +12,4 @@ export * from './multi-swap-abi';
 export * from './router-abi';
 export * from './super-voter-abi';
 export * from './venft-minimal-abi';
+export * from './voter-abi';
