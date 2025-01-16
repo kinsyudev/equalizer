@@ -9,6 +9,7 @@ export * from './minimal-pair-abi';
 export * from './minimal-token-abi';
 export * from './minimal-voter-abi';
 export * from './multi-swap-abi';
+export * from './pairAbi';
 export * from './router-abi';
 export * from './super-voter-abi';
 export * from './venft-minimal-abi';

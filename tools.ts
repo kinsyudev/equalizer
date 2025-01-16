@@ -165,4 +165,27 @@ export const tools: AiTool[] = [
             },
         ],
     },
+    {
+        name: 'claimLpFees',
+        description: 'Claims accumulated trading fees from an Equalizer LP position',
+        required: ['chainName', 'account', 'pairAddress'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to claim fees',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that will claim fees',
+            },
+            {
+                name: 'pairAddress',
+                type: 'string',
+                description: 'Address of the LP pair contract',
+            },
+        ],
+    },
 ];
