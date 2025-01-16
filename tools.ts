@@ -94,7 +94,6 @@ export const tools: AiTool[] = [
             },
         ],
     },
-
     {
         name: 'claimAllRewards',
         description: 'Claims all rewards earned from voting with a veNFT, including gauge and bribe rewards from Equalizer',
@@ -135,6 +134,34 @@ export const tools: AiTool[] = [
                 name: 'btokens',
                 type: 'array',
                 description: 'Array of arrays containing reward token addresses for each bribe',
+            },
+        ],
+    },
+    {
+        name: 'claimFarmReward',
+        description: 'Claims rewards from Equalizer Concentrated Liquidity farm position',
+        required: ['chainName', 'account', 'farmAddress', 'earnedAddress'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to claim rewards',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that will claim rewards',
+            },
+            {
+                name: 'farmAddress',
+                type: 'string',
+                description: 'Address of the farm contract',
+            },
+            {
+                name: 'earnedAddress',
+                type: 'string',
+                description: 'Address of the reward token',
             },
         ],
     },
