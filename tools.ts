@@ -216,4 +216,55 @@ export const tools: AiTool[] = [
             },
         ],
     },
+    {
+        name: 'collectFeesFromThickNfpPosition',
+        description: 'Collects accumulated fees from a Thick NFT Position',
+        required: ['chainName', 'account', 'tokenId', 'nfpManagerAddress'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to collect fees',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that owns the position',
+            },
+            {
+                name: 'tokenId',
+                type: 'number',
+                description: 'ID of the position NFT',
+            },
+            {
+                name: 'nfpManagerAddress',
+                type: 'string',
+                description: 'Address of the NFT Position Manager contract',
+            },
+        ],
+    },
+    {
+        name: 'createGauge',
+        description: 'Creates a new gauge for an Equalizer LP pair to enable rewards',
+        required: ['chainName', 'account', 'pairAddress'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to create gauge',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that will create the gauge',
+            },
+            {
+                name: 'pairAddress',
+                type: 'string',
+                description: 'Address of the LP pair',
+            },
+        ],
+    },
 ];
