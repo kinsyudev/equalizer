@@ -56,4 +56,4 @@ export const equityFarmAbi = [
         stateMutability: 'view',
         type: 'function',
     },
-];
+] as const;

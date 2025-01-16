@@ -1,4 +1,4 @@
-export const clFarmLens = [
+export const clFarmLensAbi = [
     {
         inputs: [
             { internalType: 'contract IFarmland', name: 'farm', type: 'address' },
@@ -17,4 +17,4 @@ export const clFarmLens = [
         stateMutability: 'view',
         type: 'function',
     },
-];
+] as const;

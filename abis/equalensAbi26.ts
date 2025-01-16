@@ -28,4 +28,4 @@ export const equalensAbi26 = [
         stateMutability: 'view',
         type: 'function',
     },
-];
+] as const;

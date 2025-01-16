@@ -105,4 +105,4 @@ export const equalensMultiBalanceAbi = [
         stateMutability: 'view',
         type: 'function',
     },
-];
+] as const;

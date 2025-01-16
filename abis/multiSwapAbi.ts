@@ -134,4 +134,4 @@ export const multiSwapAbi = [
         stateMutability: 'view',
         type: 'function',
     },
-];
+] as const; 
