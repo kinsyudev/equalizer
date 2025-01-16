@@ -188,4 +188,32 @@ export const tools: AiTool[] = [
             },
         ],
     },
+    {
+        name: 'claimLpReward',
+        description: 'Claims rewards from an Equalizer gauge LP position',
+        required: ['chainName', 'account', 'gaugeAddress', 'tokenAddress'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to claim rewards',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that will claim rewards',
+            },
+            {
+                name: 'gaugeAddress',
+                type: 'string',
+                description: 'Address of the gauge contract',
+            },
+            {
+                name: 'tokenAddress',
+                type: 'string',
+                description: 'Address of the reward token to claim',
+            },
+        ],
+    },
 ];

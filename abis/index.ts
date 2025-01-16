@@ -5,6 +5,8 @@ export * from './clFarmLensAbi';
 export * from './equalensAbi25';
 export * from './equalensAbi26';
 export * from './equalensMultiBalanceAbi';
+export * from './equityFarmAbi';
+export * from './gaugeAbi';
 export * from './minimalPairAbi';
 export * from './minimal-token-abi';
 export * from './minimal-voter-abi';
