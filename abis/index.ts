@@ -15,5 +15,5 @@ export * from './pairAbi';
 export * from './routerAbi';
 export * from './superVoterAbi';
 export * from './thickNfpPositionCollectAbi';
-export * from './veNftMinimalAbi';
+export * from './veNftAbi';
 export * from './voterAbi';
