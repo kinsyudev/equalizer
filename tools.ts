@@ -62,6 +62,40 @@ export const tools: AiTool[] = [
         ],
     },
     {
+        name: 'claimNftBribes',
+        description: 'Claims all NFT bribe rewards earned from voting with a veNFT from Equalizer',
+        required: ['chainName', 'account', 'tokenId', 'bribes', 'btokens'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to claim bribes',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that owns the veNFT',
+            },
+            {
+                name: 'tokenId',
+                type: 'number',
+                description: 'ID of the veNFT',
+            },
+            {
+                name: 'bribes',
+                type: 'array',
+                description: 'Array of bribe addresses to claim from',
+            },
+            {
+                name: 'btokens',
+                type: 'array',
+                description: 'Array of arrays containing reward token addresses for each bribe',
+            },
+        ],
+    },
+
+    {
         name: 'claimAllRewards',
         description: 'Claims all rewards earned from voting with a veNFT, including gauge and bribe rewards from Equalizer',
         required: ['chainName', 'account', 'tokenId', 'gauges', 'gtokens', 'bribes', 'btokens'],
