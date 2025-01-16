@@ -267,4 +267,63 @@ export const tools: AiTool[] = [
             },
         ],
     },
+    {
+        name: 'createLiquidityPool',
+        description: 'Creates a new Equalizer liquidity pool and adds initial liquidity',
+        required: ['chainName', 'account', 'token0Address', 'token1Address', 'isStable', 'amount0Desired', 'amount1Desired', 'amount0Min', 'amount1Min'],
+        props: [
+            {
+                name: 'chainName',
+                type: 'string',
+                enum: supportedChains.map(getChainName),
+                description: 'Chain name where to create pool',
+            },
+            {
+                name: 'account',
+                type: 'string',
+                description: 'Account address that will create the pool',
+            },
+            {
+                name: 'token0Address',
+                type: 'string',
+                description: 'Address of the first token',
+            },
+            {
+                name: 'token1Address',
+                type: 'string',
+                description: 'Address of the second token',
+            },
+            {
+                name: 'isStable',
+                type: 'boolean',
+                description: 'Whether to create a stable or volatile pool',
+            },
+            {
+                name: 'amount0Desired',
+                type: 'string',
+                description: 'Desired amount of first token in decimal format',
+            },
+            {
+                name: 'amount1Desired',
+                type: 'string',
+                description: 'Desired amount of second token in decimal format',
+            },
+            {
+                name: 'amount0Min',
+                type: 'string',
+                description: 'Minimum amount of first token in decimal format',
+            },
+            {
+                name: 'amount1Min',
+                type: 'string',
+                description: 'Minimum amount of second token in decimal format',
+            },
+            {
+                name: 'deadline',
+                type: 'number',
+                description: 'Unix timestamp deadline for the transaction',
+                optional: true,
+            },
+        ],
+    },
 ];
